@@ -1,3 +1,105 @@
 <html>
-  <title>Placeholder</title>
+    <!--MDAWG-->
+<head>
+    <title>67</title>
+    <link rel="icon" type="image/x-icon" href="https://masonnetincusa.github.io/newrepo/favicon.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.lb.wbmdstatic.com/vim/live/webmd/consumer_assets/site_images/article_thumbnails/reference_guide/what_to_know_about_labrador_retriever_ref_guide/1800x1200_what_to_know_about_labrador_retriever_ref_guide.jpg?resize=750px:*&output-quality=75');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #counterDisplay {
+            color: blue;
+            padding: 10px;
+            font-size: 24px;
+        }
+        .wait {
+            cursor: wait;
+        }
+        .disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .button {
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button3 {
+            border: 2px solid #f44336;
+        }
+        .button3:hover {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body class="wait">
+    <h1><center>67</center></h1>
+    <hr>
+    <center><button id="countButton" class="button button3" onclick="incrementCount()">Press 67</button></center>
+    <center><p id="counterDisplay">0</p></center>
+    <center><p>GOAL: 6741 (the max)</p></center>
+    <br>
+    <hr>
+    <center>6767676767676767 just cause hahahahahahahaha :P</center>
+    <center>Designed by MDAWG in California. Made in China.</center>
+
+    <!-- 1. Add the audio element -->
+    <audio id="soundEffect" src="https://masonnetincusa.github.io/newrepo/67.mp3" preload="auto"></audio>
+
+    <script src="cdn.jsdelivr.net"></script>
+    <script>
+        var count = 0;
+        var maxCount = 6741;
+        // 2. Get the audio element by ID
+        var sound = document.getElementById("soundEffect");
+
+        function shootConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 90,
+                origin: { y: 0.6 }
+            });
+        }
+
+        function incrementCount() {
+            var buttonElement = document.getElementById("countButton");
+            var displayElement = document.getElementById("counterDisplay");
+
+            // 3. Play the sound effect every time the function runs
+            if (sound) {
+                sound.pause(); // Optional: stop the previous play if it's still running
+                sound.currentTime = 0; // Rewind to the start
+                sound.play().catch(error => {
+                    console.error("Audio playback failed:", error);
+                });
+            }
+
+            if (count < maxCount) {
+                count++;
+                displayElement.textContent = count;
+            }
+
+            if (count >= maxCount) {
+                buttonElement.disabled = true;
+                buttonElement.classList.add("disabled");
+                displayElement.textContent = "Max reached: " + count + " 🎉";
+                shootConfetti();
+            }
+        }
+    </script>
+</body>
+    <!-- Designed by MDAWG -->
 </html>
